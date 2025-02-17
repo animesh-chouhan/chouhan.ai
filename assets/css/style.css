@@ -1,0 +1,112 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFFFFF;
+  color: #212121;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo h1 {
+  font-size: 2rem;
+}
+
+header nav {
+  position: relative;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #FFFFFF;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #FFC107;
+}
+
+/* Hero Section */
+#hero {
+  background-color: #FFC107;
+  color: #000000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero .hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+#hero .hero-content p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #F9F9F9;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+section p {
+  font-size: 1.1rem;
+  color: #616161;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #212121;
+  color: #FFFFFF;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #FFC107;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
