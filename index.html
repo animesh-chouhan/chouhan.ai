@@ -5,57 +5,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chouhan Industries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/logo-icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/images/logo.png" alt="Chouhan Industries Logo" class="logo-img">
-            <h1>Chouhan Industries</h1>
-        </div>
-        <nav>
-            <ul id="nav-list">
-                <li><a href="#about">About</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#quality">Quality</a></li>
+
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="wordmark"><img src="assets/favicons/logo-icon.svg" alt="Chouhan Industries"
+                    class="nav-logo">CHOUHAN INDUSTRIES</a>
+            <ul class="nav-links">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="open-source.html">Open Source</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="open-source.html">Open Source</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
 
     <section id="hero">
-        <div class="hero-content">
-            <h2>Manufacturing Anything and Everything</h2>
-            <p>Open-source. Premium Quality. No Compromise.</p>
+        <div class="hero-inner">
+            <p class="eyebrow">Open Hardware · Est. 2025</p>
+            <h1>Open by Design.<br><em>Built to Last.</em></h1>
+            <div class="gold-rule"></div>
+            <p class="hero-sub">Hardware designed for the public, built to the highest standard.</p>
         </div>
     </section>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>We are a bold, disruptive force in the manufacturing world. We make everything open-source and fully
-            available to the public.</p>
+        <div class="section-inner">
+            <div class="manifesto-block">
+                <p class="manifesto-text">
+                    Chouhan Industries was founded on a single conviction: that the best hardware should be free for
+                    anyone to study, build upon, and improve. We manufacture to the highest standard and publish
+                    everything: schematics, processes, and tolerances, without restriction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities">
+        <div class="section-inner">
+            <p class="section-label">Capabilities</p>
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <span class="cap-number">01</span>
+                    <div class="cap-rule"></div>
+                    <h3>Open Source</h3>
+                    <p>Every schematic, tolerance spec, and process document is public record. No proprietary lock-in.
+                        No licensing walls.</p>
+                </div>
+                <div class="capability-item">
+                    <span class="cap-number">02</span>
+                    <div class="cap-rule"></div>
+                    <h3>Manufacturing</h3>
+                    <p>Full-stack production across mechanical, electronic, and systems hardware. Every step owned
+                        in-house.</p>
+                </div>
+                <div class="capability-item">
+                    <span class="cap-number">03</span>
+                    <div class="cap-rule"></div>
+                    <h3>Quality Assurance</h3>
+                    <p>Testing is not a phase. It is the process. Every unit meets the same standard, without exception.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="philosophy">
-        <h2>Our Philosophy</h2>
-        <p>We don't compete; we disrupt. Our products are not just about availability—they're about quality, innovation,
-            and redefining industries.</p>
-    </section>
-
-    <section id="quality">
-        <h2>Premium Quality & QA</h2>
-        <p>Our commitment is to provide the highest quality products, thoroughly tested and quality-assured for
-            excellence.</p>
+        <div class="section-inner">
+            <p class="section-label">Philosophy</p>
+            <h2 class="philosophy-statement">
+                Hardware is too important<br>to keep <em>closed.</em>
+            </h2>
+        </div>
     </section>
 
     <footer>
-        <p class="license">
-            <a href="https://chouhan.ai" target="_blank">Chouhan Industries</a> made with ❤️ by
-            <a href="https://animeshchouhan.com" target="_blank">Animesh Chouhan</a> is licensed under
-            <a href="https://opensource.cern.ch/hardware/cern-open-hardware-license" target="_blank"
-                rel="license noopener noreferrer">
-                CERN Open Hardware License v2.0 (Strongly Reciprocal)</a>
-        </p>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <a href="#" class="footer-wordmark"><img src="assets/favicons/logo-icon.svg" alt="Chouhan Industries"
+                        class="footer-logo">CHOUHAN INDUSTRIES</a>
+                <nav class="footer-nav">
+                    <a href="products.html">Products</a>
+                    <a href="open-source.html">Open Source</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="https://ohwr.org/project/cernohl/-/wikis/uploads/819d71bea3458f71fba6cf4fb0f2de6b/cern_ohl_s_v2.txt"
+                        target="_blank" rel="noopener noreferrer">CERN OHL v2.0</a>
+                    <a href="https://animeshchouhan.com" target="_blank"
+                        rel="noopener noreferrer">animeshchouhan.com</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Chouhan Industries. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://x.com/chouhan_ai" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+                    <a href="https://www.linkedin.com/company/chouhan-industries" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
