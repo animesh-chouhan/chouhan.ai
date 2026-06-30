@@ -87,7 +87,7 @@
         <a href="#omp" class="product-card" style="display: block; text-decoration: none;">
           <span class="status">In Development</span>
           <h3>Open Media Platform</h3>
-          <p>A fully open, modular media computing platform. Every input, output, codec, and expansion module is replaceable and documented. The cassette is one application. The platform supports dozens.</p>
+          <p>A fully open, modular media computing platform. Every input, output, codec, and expansion module is replaceable and documented. Built for any medium, any format, any use case.</p>
           <p style="margin-top: 20px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold);">Learn More</p>
         </a>
         <div class="product-card" style="display: flex; flex-direction: column; justify-content: center; align-items: flex-start; border-left: none;">
@@ -116,7 +116,7 @@
           <p class="lead">A modular core with an open expansion standard.</p>
           <div class="detail">
             <p>OMP is a hardware platform where every layer is open. The core board handles computing. Expansion modules handle everything else. Software never talks directly to hardware.</p>
-            <p>Think Raspberry Pi meets Hi-Fi meets Framework Laptop. The cassette is one application. The platform supports dozens.</p>
+            <p>Think Raspberry Pi meets Hi-Fi meets Framework Laptop. Any medium is a module. Any application runs the same API.</p>
           </div>
         </div>
       </div>
@@ -258,7 +258,7 @@
           </div>
         </div>
         <div>
-          <pre class="code-block">player.open("cassette0")
+          <pre class="code-block">player.open("media0")
 
 player.play()
 
@@ -268,8 +268,9 @@ player.record()
 
 player.stop()
 
-# same API for SD, USB,
-# CD, Bluetooth, vinyl</pre>
+# same API for every module:
+# SD, USB, DAC, Bluetooth,
+# CD, vinyl, radio</pre>
         </div>
       </div>
     </div>
@@ -278,42 +279,42 @@ player.stop()
   <section class="page-section">
     <div class="section-inner">
       <p class="section-label">Roadmap</p>
-      <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 300; margin-bottom: 48px;">Six phases. One platform.</h2>
+      <h2 style="font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 300; margin-bottom: 48px;">One platform. Built in stages.</h2>
       <div class="roadmap-grid">
         <div class="roadmap-item">
           <p class="roadmap-phase">Phase 1</p>
-          <h4>Open Media Player</h4>
+          <h4>Core Platform</h4>
           <p>Core board with USB, SD, Bluetooth, and DAC. Target price under Rs. 10,000. Entry point for developers and early adopters.</p>
           <span class="status">In Development</span>
         </div>
         <div class="roadmap-item">
           <p class="roadmap-phase">Phase 2</p>
-          <h4>Expansion Bus</h4>
-          <p>Publish the connector specification. Developers begin building third-party modules. The ecosystem opens.</p>
+          <h4>Open SDK & Expansion Standard</h4>
+          <p>Publish the Open Media SDK and connector specification. Third-party module development opens. The platform becomes an ecosystem.</p>
           <span class="status">Planned</span>
         </div>
         <div class="roadmap-item">
           <p class="roadmap-phase">Phase 3</p>
-          <h4>Analog Cassette Module</h4>
-          <p>Read and write existing analog tapes. Full schematics, head alignment specs, and calibration procedures published.</p>
+          <h4>First-Party Modules</h4>
+          <p>Audio DAC, ADC, physical media, and storage modules ship. Full schematics and fabrication files published for each.</p>
           <span class="status">Planned</span>
         </div>
         <div class="roadmap-item">
           <p class="roadmap-phase">Phase 4</p>
-          <h4>Digital Cassette Recorder</h4>
-          <p>Open format. Open firmware. Store any media on cassette tape with error correction and full metadata support.</p>
+          <h4>Developer Ecosystem</h4>
+          <p>Community-built modules, third-party applications, and platform integrations. Open registry for modules and software.</p>
           <span class="status">Planned</span>
         </div>
         <div class="roadmap-item">
           <p class="roadmap-phase">Phase 5</p>
-          <h4>Digital Cassette Standard</h4>
-          <p>Publish the complete specification. Anyone can manufacture compatible cassettes, heads, and decks.</p>
+          <h4>Platform Standard</h4>
+          <p>Publish the complete OMP specification. Any manufacturer can build a fully compatible platform or module without restriction.</p>
           <span class="status">Research</span>
         </div>
         <div class="roadmap-item">
           <p class="roadmap-phase">Phase 6</p>
-          <h4>High-Density Tape</h4>
-          <p>Custom read/write heads with modern error correction. Several gigabytes per cassette. Industrial archival use case.</p>
+          <h4>Industrial & Archival</h4>
+          <p>Broadcast-grade I/O, high-density storage, and professional archival modules. The platform scales to institutional use.</p>
           <span class="status">Research</span>
         </div>
       </div>
