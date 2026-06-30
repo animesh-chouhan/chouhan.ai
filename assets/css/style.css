@@ -48,6 +48,7 @@ a {
   left: 0;
   right: 0;
   height: var(--nav-h);
+  padding: 0 48px;
   z-index: 100;
   transition: background 0.4s ease, border-color 0.4s ease;
   border-bottom: 1px solid transparent;
@@ -84,7 +85,7 @@ a {
 }
 
 .nav-logo {
-  height: 18px;
+  height: 26px;
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -101,9 +102,9 @@ a {
 .nav-links a {
   font-size: 0.875rem;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   color: var(--muted);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .nav-links a:hover {
@@ -140,7 +141,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 8vw, 7.5rem);
   font-weight: 300;
-  line-height: 1.05;
+  line-height: 1.2;
   letter-spacing: -0.01em;
   color: var(--text);
   margin-bottom: 40px;
@@ -150,6 +151,20 @@ a {
 #hero h1 em {
   font-style: italic;
   color: var(--gold);
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--muted);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
 }
 
 .gold-rule {
@@ -164,7 +179,7 @@ a {
   font-weight: 300;
   color: var(--muted);
   letter-spacing: 0.05em;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 
@@ -191,16 +206,26 @@ a {
 }
 
 .manifesto-block {
-  max-width: 760px;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.oshw-badge {
+  width: 140px;
+  flex-shrink: 0;
+  margin-left: auto;
+  opacity: 0.9;
 }
 
 .manifesto-text {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.9;
   color: var(--text);
-  opacity: 0.85;
+  opacity: 0.75;
+  max-width: 760px;
 }
 
 /* ── Capabilities ────────────────────────────────────────── */
@@ -255,6 +280,80 @@ a {
   line-height: 1.7;
 }
 
+/* ── Roles List ──────────────────────────────────────────── */
+.roles-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.role-meta {
+  display: grid;
+  grid-template-columns: 120px 240px 1fr;
+  align-items: center;
+  gap: 0 32px;
+  flex: 1;
+}
+
+.role-dept {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.role-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.role-desc {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.role-apply {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Video Embed ─────────────────────────────────────────── */
+.video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border);
+}
+
 /* ── Philosophy ──────────────────────────────────────────── */
 #philosophy {
   padding: 160px 0;
@@ -266,7 +365,7 @@ a {
   font-family: var(--font-display);
   font-size: clamp(3rem, 7vw, 6.5rem);
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.25;
   color: var(--text);
 }
 
@@ -462,17 +561,34 @@ footer {
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav-inner { padding: 0 24px; }
+  #navbar { padding: 0; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
   #hero { padding: 0 24px; }
-  .scroll-hint { left: 24px; }
+  .scroll-hint { bottom: 24px; }
 
   .section-inner { padding: 0 24px; }
+
+  .manifesto-block {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .oshw-badge {
+    width: 100px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   #about, #capabilities, #philosophy { padding: 100px 0; }
 
   .capabilities-grid { grid-template-columns: 1fr; }
+
+  .role-item { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .role-meta { grid-template-columns: 1fr; gap: 4px; }
+  .role-apply { align-self: flex-start; }
 
   .footer-top {
     flex-direction: column;
